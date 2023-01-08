@@ -1,0 +1,20 @@
+[
+  {
+    "productName": "T-500",
+    "isDeleted": 0,
+    "category": "CFL",
+    "priceUSD": 500,
+    "priceGBP": 400,
+    "productID": "T-500-2020",
+    "quotationText": "this is the quotation text for T-500"
+  },
+  {
+    "productName": "T-P23",
+    "isDeleted": 0,
+    "category": "CFL",
+    "priceUSD": 100,
+    "priceGBP": 80,
+    "productID": "T-P23-2022",
+    "quotationText": "TP23 made in UK for LV network"
+  }
+]
