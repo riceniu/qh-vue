@@ -51,19 +51,32 @@ export const constantRoutes = [
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: '首页', icon: 'dashboard' }
+      meta: { title: 'Dashboard', icon: 'dashboard' }
     }]
   },
 
   {
-    path: '/quote',
+    path: '/quote/',
     component: Layout,
     children: [
       {
-        path: '',
-        name: 'Quote',
-        component: () => import('@/views/qh/quote/index'),
-        meta: { title: 'Quote', icon: 'el-icon-document' }
+        path: 'add',
+        name: 'NewQuote',
+        component: () => import('@/views/qh/quote/add'),
+        meta: { title: 'New quote', icon: 'el-icon-plus' }
+      }
+    ]
+  },
+
+  {
+    path: '/quote/',
+    component: Layout,
+    children: [
+      {
+        path: 'list',
+        name: 'QuoteList',
+        component: () => import('@/views/qh/quote/list'),
+        meta: { title: 'Quote List', icon: 'el-icon-notebook-2' }
       }
     ]
   },
@@ -97,6 +110,27 @@ export const constantRoutes = [
   },
 
   {
+    path: '/product',
+    component: Layout,
+    redirect: '/product/list',
+    name: 'Product',
+    meta: { title: 'Product', icon: 'el-icon-collection' },
+    children: [
+      {
+        path: 'list',
+        name: 'ProductList',
+        component: () => import('@/views/qh/product/list'),
+        meta: { title: 'Product Management', icon: 'table' }
+      },
+      {
+        path: 'add',
+        name: 'ProductAdd',
+        component: () => import('@/views/qh/product/add'),
+        meta: { title: 'Add Product', icon: 'el-icon-folder-add' }
+      }
+    ]
+  },
+  {
     path: '',
     component: Layout,
     children: [{
@@ -106,18 +140,7 @@ export const constantRoutes = [
       meta: { title: 'User Management', icon: 'el-icon-service' }
     }]
   },
-  {
-    path: '',
-    component: Layout,
-    children: [
-      {
-        path: 'product',
-        name: 'Product',
-        component: () => import('@/views/qh/product/index'),
-        meta: { title: 'Product Management', icon: 'el-icon-collection' }
-      }
-    ]
-  },
+
   {
     path: '/',
     component: Layout,

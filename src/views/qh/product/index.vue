@@ -1,13 +1,4 @@
 <template>
-  <div>
-    Product page
-  </div>
+  <div class="app-container">this is product page</div>
 </template>
 
-<script>
-export default {
-  dada: {
-    return: null
-  }
-}
-</script>
